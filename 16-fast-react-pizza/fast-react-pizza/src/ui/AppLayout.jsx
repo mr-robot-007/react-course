@@ -10,7 +10,7 @@ function AppLayout() {
     <div className="grid-rows-[auto_1fr_auto] grid h-screen ">
       {isLoading && <Loader />}
       <Header />
-      <div className="overflow-scroll my-10">
+      <div className="overflow-scroll my-1">
         <main className="mx-auto max-w-3xl ">
           <Outlet />
         </main>
