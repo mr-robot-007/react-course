@@ -1,4 +1,4 @@
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUser } from "../features/authentication/useUser";
 import Spinner from "./Spinner";
 import styled from "styled-components";
@@ -36,8 +36,7 @@ function ProtectedRoute({ children }) {
     );
 
   // 4. If there is a User, render the app
-
-  return children;
+  if (isAuthenticated) return children;
 }
 
 export default ProtectedRoute;

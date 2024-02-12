@@ -7,6 +7,7 @@ import { subtractDates } from "../utils/helpers";
 import { bookings } from "./data-bookings";
 import { cabins } from "./data-cabins";
 import { guests } from "./data-guests";
+import styled from "styled-components";
 
 // const originalSettings = {
 //   minBookingLength: 3,
@@ -15,10 +16,14 @@ import { guests } from "./data-guests";
 //   breakfastPrice: 15,
 // };
 
-async function deleteGuests() {
-  const { error } = await supabase.from("guests").delete().gt("id", 0);
-  if (error) console.log(error.message);
-}
+const H3 = styled.h3`
+  color: var(--color-grey-900);
+`;
+
+// async function deleteGuests() {
+//   const { error } = await supabase.from("guests").delete().gt("id", 0);
+//   if (error) console.log(error.message);
+// }
 
 async function deleteCabins() {
   const { error } = await supabase.from("cabins").delete().gt("id", 0);
@@ -138,12 +143,11 @@ function Uploader() {
         gap: "8px",
       }}
     >
-      <h3>SAMPLE DATA</h3>
-
+      {" "}
+      <H3>SAMPLE DATA</H3>
       <Button onClick={uploadAll} disabled={isLoading}>
         Upload ALL
       </Button>
-
       <Button onClick={uploadBookings} disabled={isLoading}>
         Upload bookings ONLY
       </Button>
