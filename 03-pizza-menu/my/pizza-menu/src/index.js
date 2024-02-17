@@ -53,7 +53,17 @@ function App() {
       <h1>Hello react</h1>
       <Header />
       <Menu />
-      <Footer />
+      {/* <Footer /> */}
+
+      {/* <embed
+        src="the-wild-oasis-56717.web.app"
+        style={{ height: "300px", width: "500px" }}
+      ></embed> */}
+      {/* <iframe
+        title="test1"
+        src="the-wild-oasis-56717.web.app/"
+        style={{ height: "300px", width: "500px" }}
+      ></iframe> */}
     </div>
   );
 }
@@ -150,7 +160,7 @@ function Order({ openHour, closeHour }) {
 function Pizza({ pizzaObj }) {
   // if (pizzaObj.soldOut) return null;
   return (
-    <li className= {`pizza ${pizzaObj.soldOut?'sold-out':''}`}>
+    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObj.photoName} alt="spinaci" />
       <div>
         <h2>{pizzaObj.name}</h2>
